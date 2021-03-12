@@ -1,0 +1,8 @@
+{{ define "main" }}
+
+{{ range .Paginator.Pages }}
+{{ .Render "summary" }}
+{{ end }}
+<hr>
+{{ partial "paginator" . }}
+{{ end }}

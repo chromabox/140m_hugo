@@ -1,0 +1,17 @@
+<!-- Enable SNS card-->
+<meta property="og:site_name"           content="{{ .Site.Title }}">
+<meta property="og:title"               content="{{ .Title }}">
+<meta property="twitter:title"          content="{{ .Title }}">
+<meta property="og:url"                 content="{{ .Permalink | absURL }}">
+<meta property="og:type"                content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:description"         content="{{ .Summary }}">
+<meta property="twitter:description"    content="{{ .Summary }}">
+{{ if .Params.card_image }}
+    {{ with .Params.card_image }}
+    <meta property="og:image"       content="{{ . | absURL }}">
+    <meta property="og:image:url"   content="{{ . | absURL }}">
+    {{ end }}
+{{ else }}
+    <meta property="og:image"       content="{{ .Site.Params.card_defimg | absURL }}">
+    <meta property="og:image:url"   content="{{ .Site.Params.card_defimg | absURL }}">
+{{ end }}

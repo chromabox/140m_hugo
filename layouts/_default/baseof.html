@@ -1,0 +1,20 @@
+<!doctype html>
+{{ $lang := "ja" | default "ja" }}
+<html lang="{{ $lang }}">
+  {{ partial "head.html" . }}
+  <body class="d-flex flex-column">
+    {{ partial "mynav.html" . }}
+    <div class="container">
+      <main id="main">
+        {{ block "main" . }}{{ end }}
+      </main>
+    </div>
+    {{ if .IsPage }}
+    {{ partial "sns-share-btn" . }}
+    {{ end }}
+    {{ partial "footer.html" . }}
+    {{ partial "script.html" . }}
+    {{ partial "katex.html" . }}
+    {{ partial "google-analytics-async.html" . }}
+  </body>
+</html>

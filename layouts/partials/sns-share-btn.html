@@ -1,0 +1,6 @@
+<div class="container">
+    <div>
+        {{ $title := print .Site.Title ": " .Title }}
+        <a href="https://twitter.com/intent/tweet?url={{ .Permalink }}&text={{ $title }}" target="_blank" title="Tweet"><i class="btn btn-outline-dark fab fa-twitter"> 共有する</i></a>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+<div id="btitle-border" class="container">
+  {{ $currentPage := . }}
+  {{ $baseURL := .Site.BaseURL }}
+  {{ $stitle := .Site.Title }}
+  {{ $sbtitle := .Site.Params.subtitle }}
+  {{ $twname := .Site.Params.twname }}
+  {{ $tw_url := .Site.Params.tw_url }}
+  {{ $ghub_url := .Site.Params.github_url }}
+  {{ $ama_url := .Site.Params.hosiimo_url }}
+  <div id="btitle" class="btitle">
+    <h3><a href="{{ $baseURL }}">{{ $stitle }}</a></h3>
+  </div>
+  <div id="bstitle" class="bstitle">
+    <h4>
+      <p>{{$sbtitle}}</p>
+      <p>
+        <a href="{{ $tw_url }}">twitter({{ $twname }})</a>,
+        <a href="{{ $ghub_url }}">github</a>,
+        <a href="{{ $ama_url }}">ほしいものリスト</a>,
+        <a href="{{ "about/" | absURL }}">その他プロフィール</a>
+      </p>
+  </h4>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+{{ define "main" }}
+
+<div class="content-2-title">
+  <h3>{{ .Title }}に関する記事</h3>
+</div>
+<p></p>
+
+{{ range .Pages.ByPublishDate.Reverse }}
+{{ .Render "summary" }}
+{{ end }}
+
+{{ end }}

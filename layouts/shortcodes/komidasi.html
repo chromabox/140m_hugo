@@ -1,0 +1,11 @@
+{{/*
+  content komidasi shortcode
+*/}}
+
+{{ $quote := .Inner }}
+{{ $quote = replace $quote "<p>" "" }}
+{{ $quote = replace $quote "</p>" "" }}
+{{ $quote = safeHTML $quote }}
+<div class="content-3-title">
+  <h3>{{ $quote }}</h3>
+</div>

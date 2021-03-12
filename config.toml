@@ -1,0 +1,71 @@
+baseURL = "https://chromabox.github.io/140m"
+title = "140文字以上"
+defaultContentLanguage = "ja"
+languageCode = "ja-jp"
+languageName = "ja"
+#disablePathToLower = true
+HasCJKLanguage = true
+enableEmoji = true
+pygmentsUseClasses = true
+pygmentsCodefences = true 
+#publishDir = "../testpub/"
+relativeURLs = false
+disableKinds = ["RSS", "sitemap", "robotsTXT", "404"]
+
+[params]
+mainSections = ["post","x2"]
+subtitle = "140文字では伝わらないことを書いています。禁無断転載"
+description = "140文字では伝わらないことを書いています。禁無断転載"
+author = "chromarock"
+twname = "@chromarock"
+tw_url = "https://twitter.com/chromarock"
+github_url = "https://github.com/chromabox"
+hosiimo_url = "https://www.amazon.jp/hz/wishlist/ls/2IWGNZS26U41G?ref_=wl_share"
+copyright = " chromarock; all rights reserved."
+includeBootstrapJs = true
+containerMaxWidth = "700px"
+dateFormat = "2006-01-02"
+footerText = "Made with [Hugo](https://gohugo.io/) & base theme [Vanilla](https://github.com/zwbetz-gh/vanilla-bootstrap-hugo-theme)"
+hideFooter = false
+card_defimg = "cards/default_card.jpg"
+# use latex
+katex = true
+
+[taxonomies]
+  tag = "tags"
+
+#[permalinks]
+#  post = "/:year/:month/:title/"
+
+[markup]
+  defaultMarkdownHandler = "goldmark"
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+    [markup.goldmark.parser]
+      attribute = true
+      autoHeadingID = true
+    [markup.goldmark.renderer]
+      hardWraps = false
+      unsafe = true
+      xHTML = false
+ [markup.highlight]
+    codeFences = true
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = false
+    style = "monokai"
+    tabWidth = 4
+ [markup.tableOfContents]
+    endLevel = 6
+    startLevel = 2
+
+

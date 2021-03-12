@@ -1,0 +1,10 @@
+<article class="blog-post">
+    <header class="header-box">
+        {{ partial "post-date" . }}
+        {{ partial "post-title" . }}
+        {{ partial "post-tags" . }}
+        {{ partial "post-categories" . }}
+    {{ .Summary }}
+    ....<a href="{{ .Permalink }}">{{ "続きを読む" }}</a>
+    </header>
+</article>

@@ -1,0 +1,11 @@
+{{ define "main" }}
+<header class="header-box">
+    {{ partial "post-date" . }}
+    {{ partial "post-title" . }}
+    {{ partial "post-tags" . }}
+    {{ partial "post-categories" . }}
+</header>
+<div class="main-box">
+{{ .Content }}
+</div>
+{{ end }}

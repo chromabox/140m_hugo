@@ -1,0 +1,7 @@
+{{/*
+  small box shortcode
+*/}}
+
+{{ $quote := .Inner }}
+{{ $quote = $quote | markdownify }}
+<div class="smallbox">{{ $quote }}</div>

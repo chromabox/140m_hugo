@@ -1,0 +1,8 @@
+{{ if .Params.tags }}
+<div class="blog-post-tags text-secondary">
+    <strong>{{ "tags" }}:</strong>
+    {{ range .Params.tags }}
+        <a class="btn btn-sm btn-outline-dark tag-btn" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+    {{ end }}
+</div>
+{{ end }}
