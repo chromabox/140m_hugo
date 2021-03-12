@@ -1,4 +1,0 @@
-[submodule "140m"]
-	path = 140m
-	url = https://github.com/chromabox/140m.git
-	branch = master
