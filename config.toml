@@ -13,7 +13,6 @@ relativeURLs = false
 disableKinds = ["RSS", "sitemap", "robotsTXT", "404"]
 
 [params]
-mainSections = ["post","x2"]
 subtitle = "140文字では伝わらないことを書いています。禁無断転載"
 description = "140文字では伝わらないことを書いています。禁無断転載"
 author = "chromarock"
@@ -33,9 +32,6 @@ katex = true
 
 [taxonomies]
   tag = "tags"
-
-#[permalinks]
-#  post = "/:year/:month/:title/"
 
 [markup]
   defaultMarkdownHandler = "goldmark"
@@ -67,5 +63,3 @@ katex = true
  [markup.tableOfContents]
     endLevel = 6
     startLevel = 2
-
-
