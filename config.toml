@@ -8,7 +8,7 @@ HasCJKLanguage = true
 enableEmoji = true
 pygmentsUseClasses = true
 pygmentsCodefences = true 
-#publishDir = "../testpub/"
+publishDir = "140m"
 relativeURLs = false
 disableKinds = ["RSS", "sitemap", "robotsTXT", "404"]
 
