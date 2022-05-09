@@ -55,8 +55,23 @@ $ ./balenaEtcher-1.7.9-x64.AppImage --disable-gpu-sandbox
 
 後はGUIが出てくるので、イメージを設定して、USBメモリも指定して「Flush」を押して書き込み
 
-参考：
-https://kledgeb.blogspot.com/2022/04/ubuntu-2204-64-windowslinuxmacosubuntu.html
+参考：  
+https://kledgeb.blogspot.com/2022/04/ubuntu-2204-64-windowslinuxmacosubuntu.html  
+  
+  
+{{< komidasi >}}
+小ネタ：FreeDOSをUSBから起動する方法
+{{< /komidasi >}}
+
+古いマシンを復活させようとしてBIOSをアップデートしないといけなかったりする場合があったりするとWindowsからかDOSから起動しないといけないことって多々ありますよね。
+
+そういう場合は先程の「balenaEtcher」とFreeDOSを使えばUbuntuでもDOSの起動USBメモリを生成できます。
+
+FreeDOSはここ
+http://freedos.org/download/
+から[FreeDOS 1.3 LiteUSB]をダウンロードすればOK。
+
+そしてそれをbalenaEtcherで書けば動きます。楽ですね。
 
 
 {{< midasi >}}
