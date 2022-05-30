@@ -729,3 +729,37 @@ $ sudo shred -uvz <ファイルシステム名>
 ```
 全領域に対して3回ランダムデータを書くのでかなり時間がかかる。  
 実施の際は色々確認した上で、UbuntuのLiveUSBにも入っているのでLiveUSBからやったほうがいいかもしれない。  
+
+<br>
+{{< midasi >}}
+snap版remminaで個々の接続の設定ができず落ちる、ある日突然接続できなくなって落ちるなどあった場合の対処法
+{{< /midasi >}}
+
+Snapの権限設定になんの問題もなく、Remminaを開いて[設定]-[オプション]-[Remminaのデータフォルダ]が  
+`/home/user/snap/remmina/バージョン/.local/share/remmina/`  
+になっていて、dmesgの結果
+```
+[87494.552862] audit: type=1400 audit(1653524117.897:180): apparmor="DENIED" operation="mknod" profile="snap.remmina.remmina" name="/home/user/snap/remmina/バージョン/.local/share/remmina/XXX.remmina.YYYYYYY" pid=141664 comm="remmina" requested_mask="c" denied_mask="c" fsuid=1000 ouid=1000
+```
+とか、AppArmorでDENYされて蹴られている場合は、データフォルダに原因がある。  
+よってこの[Remminaのデータフォルダ]を他の場所に移す。  
+
+Remminaを一旦終わらせた後で以下のようにして、接続設定を移しておく
+```
+$ cd ~
+$ mkdir remmina_data
+$ cp ~/snap/remmina/current/.local/share/remmina/* remmina_data/
+```
+
+その後、Remminaを再起動して[設定]-[オプション]-[Remminaのデータフォルダ]を  
+`/home/user/remmina_data`  
+に指定。  
+その後、もう一度Remminaを再起動すればOK。  
+
+これはSnap版Remminaのコンフィグに前のバージョンのデータDIRの設定が残っていて、そこに書かれた前のSnapバージョンのDirを参照しようとしてAppArmorに「それは違うだろ」って蹴られていることが原因だが、Remminaプロジェクトはこれを治す気はないようで、データDirを共通の場所に移してほしいと言っている。  
+
+https://gitlab.com/Remmina/Remmina/-/issues/2548#note_622712677
+
+他のSnapアプリだとそういうことはあまりないのでうーんと言ったところだけど、微妙にハマりポイントですねこれ…  
+
+<br>
