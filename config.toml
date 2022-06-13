@@ -22,7 +22,7 @@ github_url = "https://github.com/chromabox"
 hosiimo_url = "https://www.amazon.jp/hz/wishlist/ls/2IWGNZS26U41G?ref_=wl_share"
 copyright = " chromarock; all rights reserved."
 includeBootstrapJs = true
-containerMaxWidth = "800px"
+containerMaxWidth = "1200px"
 dateFormat = "2006-01-02"
 footerText = "Made with [Hugo](https://gohugo.io/) & base theme [Vanilla](https://github.com/zwbetz-gh/vanilla-bootstrap-hugo-theme)"
 hideFooter = false
